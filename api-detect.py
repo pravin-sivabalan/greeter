@@ -10,7 +10,7 @@ params = urllib.urlencode({
     # Request parameters
     'returnFaceId': 'true',
     'returnFaceLandmarks': 'false',
-    'returnFaceAttributes': '{string}',
+    'returnFaceAttributes': 'age',
 })
 
 body = "\"url\":\"http://images.closerweekly.com/uploads/posts/image/87845/sylvester-stallone.jpg\""
