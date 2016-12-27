@@ -13,7 +13,7 @@ params = urllib.urlencode({
     'returnFaceAttributes': 'age',
 })
 
-body = "\"url\":\"http://images.closerweekly.com/uploads/posts/image/87845/sylvester-stallone.jpg\""
+body = "\"url\":\"http://bloximages.newyork1.vip.townnews.com/stltoday.com/content/tncms/assets/v3/editorial/2/05/2058e5ee-ef90-11e5-8d8e-cbd9245f0029/56f039262c7f3.image.jpg?resize=1200%2C1309\""
 try:
     conn = httplib.HTTPSConnection('api.projectoxford.ai')
     conn.request("POST", "/face/v1.0/detect?%s" % params, "{" + body + "}", headers)
