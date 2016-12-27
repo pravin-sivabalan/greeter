@@ -8,20 +8,21 @@ headers = {
 
 params = urllib.urlencode({
     'isIdentical' : 'true',
-    'confidence' : 5
+    'confidence' : '5'
 })
 
 body = {
-    'faceId1':'f0a1dfae-b326-4ca8-8f5a-fbefacd7b7cd',
-    'faceId2':'5ec0c153-5093-4863-8d76-aa055c313cbb'
+    "faceId1":"f0a1dfae-b326-4ca8-8f5a-fbefacd7b7cd",
+    "faceId2":"5ec0c153-5093-4863-8d76-aa055c313cbb"
 }
 
 try:
     conn = httplib.HTTPSConnection('api.projectoxford.ai')
-    conn.request("POST", "/face/v1.0/verify?%s" % params, body, headers)
+    conn.request("POST", "/face/v1.0/verify?%s" % params, str(body), headers)
     response = conn.getresponse()
     data = response.read()
     print(data)
     conn.close()
 except Exception as e:
-    print("[Errno {0}] {1}".format(e.errno, e.strerror))
+    print("oh oh")
+    # print("[Errno {0}] {1}".format(e.errno, e.strerror))

@@ -3,7 +3,7 @@ import httplib, urllib, base64
 headers = {
     # Request headers
     'Content-Type': 'application/json',
-    'Ocp-Apim-Subscription-Key': 'e36c979ae1b8412588789dcc50d7569d',
+    'Ocp-Apim-Subscription-Key': '53a06343003643058b0e4d6f407b6d59',
 }
 
 params = urllib.urlencode({
@@ -13,7 +13,7 @@ params = urllib.urlencode({
     'returnFaceAttributes': 'age',
 })
 
-body = "\"url\":\"http://bloximages.newyork1.vip.townnews.com/stltoday.com/content/tncms/assets/v3/editorial/2/05/2058e5ee-ef90-11e5-8d8e-cbd9245f0029/56f039262c7f3.image.jpg?resize=1200%2C1309\""
+body = "\"url\":\"http://pravinsivabalan.me/assets/img/profiles/prof-mobi.jpg\""
 try:
     conn = httplib.HTTPSConnection('api.projectoxford.ai')
     conn.request("POST", "/face/v1.0/detect?%s" % params, "{" + body + "}", headers)
